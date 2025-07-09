@@ -22,8 +22,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // CORS 설정 (캐시 헤더 전에 설정)
 app.use(cors({
   origin: [
-    'https://apsilivenews.netlify.app/',
-    'apsilivenews.netlify.app/'
+    'https://apilivenews.netlify.app/',
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
