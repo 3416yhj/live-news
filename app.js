@@ -20,13 +20,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // CORS 설정 (캐시 헤더 전에 설정)
-app.use(cors({
-  origin:['https://apilivenews.netlify.app/','apsilivenews.netlify.app/']
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'Cache-Control', 'If-None-Match'],
-  exposedHeaders: ['Cache-Control', 'ETag', 'Last-Modified']
-}));
+app.use(cors(origin:['https://apilivenews.netlify.app/','apsilivenews.netlify.app/']));
 
 // 전역 보안 헤더 및 캐시 설정 미들웨어
 app.use((req, res, next) => {
